@@ -103,7 +103,7 @@ def eval_postfix(expr):
                         running_total += first_number - second_number
 
                     if next_input == "*":
-                        running_total += first_number + second_number
+                        running_total += first_number * second_number
 
                     if next_input == "/":
                         running_total += first_number / second_number
