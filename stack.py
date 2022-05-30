@@ -44,6 +44,9 @@ class Stack:
 
     def pop(self):
         """pop an item off the top of the stack and remove it"""
+        if self.size() == 0:
+            raise IndexError("IndexError exception thrown")
+
         this_node = self.head
         while this_node is not None:
             self.remove()
@@ -66,6 +69,8 @@ class Stack:
 
     def top(self):
         """return the top node without deleting"""
+        if self.size() == 0:
+            raise IndexError("IndexError exception thrown")
         this_node = self.head
         while this_node is not None:
             return this_node.get_data()
